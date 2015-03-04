@@ -1,0 +1,16 @@
+<div id='logout'>
+	<%= flash[:logout] %>
+
+</div>
+
+
+<div id='errors'>
+<%= flash[:errors] %>
+<%= form_for(:session, url: login_path) do |f| %>
+	<p> user name: </p><%= f.text_field :username %>
+	<p> password: </p><%= f.password_field :password %>
+	<%= f.submit "Sign in" %>
+<% end %>
+
+
+</div>
